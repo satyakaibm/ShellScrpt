@@ -3,8 +3,7 @@ filename='sample_passwd'
 
 count=1
 while read -r line; do
-#echo "$count: $line"
-usr1=$(echo $line | awk -F: '{print $1}')
+usr1=$(echo $line | awk -F':' '{print $1}')
 echo "$count: $usr1"
 count=$((count+1))
 done < $filename
